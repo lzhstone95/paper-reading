@@ -131,27 +131,5 @@
     <!-- DataTables JS -->
     <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
-    <script>
-function showRolePopup(txtPath) {
-    fetch(txtPath)
-        .then(res => res.text())
-        .then(content => {
-            document.getElementById('role-popup-text').textContent = content;
-            document.getElementById('role-popup').style.display = 'block';
-        })
-        .catch(() => {
-            document.getElementById('role-popup-text').textContent = '内容加载失败';
-            document.getElementById('role-popup').style.display = 'block';
-        });
-        }
-        function closeRolePopup() {
-            document.getElementById('role-popup').style.display = 'none';
-        }
-        function copyRoleText() {
-            var text = document.getElementById('role-popup-text').textContent;
-            navigator.clipboard.writeText(text);
-        }
-    </script>
-
 </body>
 </html>
